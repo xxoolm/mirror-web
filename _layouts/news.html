@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hans">
 {% capture metaDesc %}{{ page.title }}{% endcapture %}
 	{% include head.html cattitle="镜像站新闻" metaDesc=metaDesc %}
 <body>
@@ -17,7 +17,7 @@
 							<div class="head">
 								<h3># {{page.title}}</h3>
 							</div>
-							<div class="meta">
+							<div class="text-secondary mb-2">
 								{% fa_svg fas.fa-calendar %} {{page.date | date: "%Y-%m-%d"}} <span style="margin-left: 1em"> {% fa_svg fas.fa-user %} {{ page.author }}</span>
 							</div>
 							<div class="content">{{page.content | markdownify }}</div>

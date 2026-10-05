@@ -1,0 +1,6 @@
+[submodule "geninfo/z-geninfo"]
+	path = geninfo/z-geninfo
+	url = https://github.com/mirrorz-org/genisolist.git
+[submodule "_helpz/global"]
+	path = _helpz/global
+	url = https://github.com/mirrorz-org/mirrorz-docs.git

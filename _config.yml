@@ -1,11 +1,5 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
+
 title: 清华大学开源软件镜像站
 # title: 北京外国语大学开源软件镜像站
 school: 清华大学
@@ -32,26 +26,10 @@ hide_navbar: false
 hide_download: false
 hide_server_status: false
 
-# Build settings
-highlighter: rouge
-markdown: kramdown
-kramdown:
-    input: GFM
-    hard_wrap: false
-
-
-sass:
-    sass_dir: static/css
-
-gems:
-    - jekyll-babel
-    - jekyll-sitemap
-    - jekyll/fontawesome/svg
-    - jekyll-minifier
-
-babel_js_extensions: 'es6'
-
-exclude: [Gemfile, Gemfile.lock, README.md, gen_robot.sh, vendor, geninfo/, gen_robot.sh, gen_desc.py, Dockerfile*]
+hide_mirrorz: false
+mirrorz_desc: 校园网联合镜像站
+mirrorz_link: "https://mirrors.cernet.edu.cn/list"
+mirrorz_help_link: "https://help.mirrors.cernet.edu.cn/"
 
 sponsors:
     megvii:
@@ -69,5 +47,54 @@ sponsors:
 
 poweredbys:
     kunpeng: "海思<sup>®</sup> Kunpeng<sup>®</sup> 920 处理器"
+
+
+# ==================================
+# Build settings below, DO NOT TOUCH
+# ==================================
+
+highlighter: rouge
+markdown: kramdown
+kramdown:
+    input: GFM
+    hard_wrap: false
+
+vite:
+    config_path: _src/vite.json
+    viteConfig: _vite.config.mjs
+
+plugins:
+    - jekyll-relative-links
+    - jekyll-sitemap
+    - jekyll/fontawesome/svg
+    - jekyll-minifier
+
+jekyll-minifier:
+    exclude: [ 'assets/*' ]
+
+exclude: [gen_robot.sh, geninfo/, gen_desc.py]
+addition_exclude:
+    - package.json
+    - package-lock.json
+    - node_modules/
+    - Gemfile
+    - Gemfile.lock
+    - README.md
+    - vendor/
+    - Dockerfile*
+    - LICENSE
+
+helpz:
+    language: zh
+    collection:
+        label: help
+
+defaults:
+  - scope:
+      path: ""
+      type: "help"
+    values:
+      layout: "help"
+      excerpt_separator: ""
 
 # vim: ts=2 sts=2 sw=2 expandtab

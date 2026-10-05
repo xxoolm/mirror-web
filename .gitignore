@@ -1,6 +1,5 @@
 *.swp
 *~
-/Gemfile.lock
 /.jekyll-metadata
 /static/tunasync.json
 /static/status/
@@ -11,6 +10,12 @@
 /deploy.sh
 /.sass-cache/
 .bundle
-vendor
+/vendor/
 .vscode/
 .DS_Store
+/node_modules/
+/.jekyll-cache/
+_stats.html
+
+.cursor/
+

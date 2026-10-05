@@ -22,6 +22,8 @@ mirror_desc:
     desc: NetBSD 的安装镜像和部分系统源码
   - name: OpenBSD
     desc: OpenBSD 的安装镜像和官方软件包仓库
+  - name: Vanilla-OS
+    desc: Vanilla OS 的安装镜像
   - name: VSCodium
     desc: VS Code 的社区编译版本
   - name: adobe-fonts
@@ -91,7 +93,7 @@ mirror_desc:
   - name: crates.io-index.git
     desc: 面向 Rust 语言的软件包索引 crates.io
   - name: ctex
-    desc: 旧版 CTEX 安装镜像存档
+    desc: CTEX 安装镜像存档
   - name: cygwin
     desc: Cygwin 官方软件包仓库
   - name: dart-pub
@@ -282,6 +284,8 @@ mirror_desc:
     desc: 在本地运行的单节点 Kubernetes 集群安装工具
   - name: mongodb
     desc: 开源的跨平台 NoSQL 文档型数据库
+  - name: mozilla
+    desc: Mozilla APT 软件源
   - name: msys2
     desc: 用于编译原生 Windows 程序的类 Linux 开发环境
   - name: mxlinux
@@ -356,6 +360,8 @@ mirror_desc:
     desc: 为 GNU Radio 设计的编译管理系统
   - name: pypi
     desc: Python 软件包索引源
+  - name: python
+    desc: Python 官方源码、软件、文档仓库
   - name: qemu.git
     desc: 处理器模拟器 QEMU 的源码 Git 仓库
   - name: qubesos
@@ -452,10 +458,7 @@ mirror_desc:
     desc: 著名的网络监视、管理系统
 
 new_mirrors:
-  - rosdistro
-  - entware
-  - sourceware
-  - crates.io-index
+  - python
 
 unlisted_mirrors:
   - status: 'success'
@@ -465,6 +468,7 @@ unlisted_mirrors:
     upstream: 'cloud.tsinghua.edu.cn'
     is_master: true
   - link_to: 'sourceware'
+    last_update: '-'
     name: "cygwin"
     url: '/cygwin/'
   - link_to: 'osdn'
@@ -524,6 +528,9 @@ unlisted_mirrors:
   - link_to: 'github-release'
     name: "thuthesis"
     url: '/github-release/tuna/thuthesis'
+  - link_to: 'github-release'
+    name: "Vanilla-OS"
+    url: '/github-release/Vanilla-OS/live-iso/'
 
 force_redirect_help_mirrors:
   - AOSP
@@ -547,14 +554,14 @@ force_redirect_help_mirrors:
   - binutils-gdb.git
   - glibc.git
   - flutter-sdk.git
-  - julia-general.git
   - pkgsrc.git
   - nixpkgs.git
+  - ohmyzsh.git
 
 label_map:
-  unknown: label-default
-  syncing: label-info
-  success: label-success
-  fail: label-warning
-  failed: label-warning
-  paused: label-warning
+  unknown: text-bg-dummy
+  syncing: text-bg-info
+  success: text-bg-success
+  fail: text-bg-warning
+  failed: text-bg-warning
+  paused: text-bg-warning
